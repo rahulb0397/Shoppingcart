@@ -1,0 +1,20 @@
+const cart = [
+{ name: "T-Shirt", price: 499.99, quantity: 2 },
+{ name: "Jeans", price: 1199.0, quantity: 1 },
+{ name: "Socks", price: 99.5, quantity: 3 }
+];
+
+function calculateCartTotal(cart) {
+let total = 0;
+
+for (let item of cart) {
+const itemTotal = item.price * item.quantity;
+total += itemTotal;
+}
+
+return total;
+}
+const total = calculateCartTotal(cart);
+console.log("Total: ₹" + total.toFixed(2));
+
+console.log("Test message");
